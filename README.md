@@ -16,6 +16,10 @@ To use this method, you have to specify the path to the token file using the plu
 
 In a pre-exit hook, this plugin also removes the exported environment variables, including `VAULT_TOKEN`.
 
+NOTES:
+ - Local fork uses `kv/buildkite/{pipeline}/{step}/environment` for the `secret_path` parameter if it is not defined.
+ - Local fork allows the vault server address to be defined in the environment variable `BUILDKITE_PLUGIN_VAULT_KEY_VALUE_VAULT_ADDR`
+
 ## Example
 
 ### Single secret example
